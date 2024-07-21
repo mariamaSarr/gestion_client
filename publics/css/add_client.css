@@ -1,0 +1,63 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.container {
+    background: #fff;
+    padding: 15px; /* Réduit le padding */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px; /* Réduit la largeur max pour ajuster la hauteur */
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 15px; /* Réduit l'espace sous le titre */
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input, form select {
+    padding: 8px; /* Réduit le padding des champs */
+    margin-bottom: 15px; /* Réduit l'espace entre les champs */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form input[type="submit"] {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px; /* Ajuste le padding pour un meilleur aspect */
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background: #555;
+}

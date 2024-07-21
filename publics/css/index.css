@@ -1,0 +1,442 @@
+/* fond bleu 1 */
+body{
+   background-color: aliceblue;
+}
+.entete1{
+    background-color: #992c92;
+}
+.entete{
+    position: absolute;
+    width: 100%;
+    
+    font-size: 24px;
+    background-color: white;
+    background-size:100%;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+.entete h2{
+    /* CLIENT MANAGER PRO */
+
+position: absolute;
+width: 446px;
+height: 0px;
+top: 40px;
+
+font-family: 'Kiwi Maru';
+font-style: normal;
+font-weight: bold;
+font-size: 30px;
+line-height: 17px;
+
+color: #007AFF;
+left: 30px;
+
+}
+.accueil{
+/* Accueil */
+
+position: absolute;
+width: 42px;
+height: 15px;
+top: 64px;
+left: 700px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 15px;
+/* identical to box height */
+
+color:#007AFF;
+
+
+}
+.contact{
+/* contacts */
+
+position: absolute;
+width: 50px;
+height: 15px;
+top: 64px;
+left: 850px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 15px;
+/* identical to box height */
+
+color: #007AFF;
+
+
+}
+.gob{
+    /* Gerez Vos Clients Optimisez Votre Temps Booster Vos Ventes */
+
+position: absolute;
+width: 482px;
+height: 45px;
+top: 70px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: bold;
+font-size: 30px;
+line-height: 30px;
+
+color: #000000;
+
+border: 76px solid rgba(0, 0, 0, 0.01);
+}
+.ovt{
+    color: #007AFF;
+}
+.text{
+    /* Client Manager Pro vous offre une solution complète pour la gestion de vos clients, simplifiant ainsi votre processus commercial à Dakar, Sénégal. */
+
+position: absolute;
+width: 390px;
+height: 36px;
+
+font-family: 'Inria Serif';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 16px;
+
+color: #000000;
+left: 90px;
+top: 300px;
+}
+.rectangle1{
+    /* Rectangle 1 */
+
+position: absolute;
+width: 161px;
+height: 44px;
+
+background: #007AFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 5px;
+top: 430px;
+left: 90px;
+}
+.cm{
+/* commencez maintenant */
+
+position: absolute;
+width: 146px;
+height: 15px;
+left: 10px;
+top: 0px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 15px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+}
+.cma{
+    color: #FFFFFF;
+}
+.img{/* gettyimages-1498981757-612x612 1 */
+
+    position: absolute;
+    width: 527px;
+    height: 272px;
+    left: 590px;
+    top: 170px;
+   
+    }
+    a{
+        color: #007AFF;
+        text-decoration: none;
+        font-family: 'Kiwi Maru';
+        
+    }
+    .services {
+        text-align: center;
+        padding: 50px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin: 20px;
+        border-radius: 10px;
+        position: relative;
+        top: 500px; /* Ajustez cette valeur selon votre mise en page */
+    }
+    
+    .services h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    
+    .services p {
+        font-size: 1.1em;
+        color: #666;
+        max-width: 700px;
+        margin: auto;
+    }
+    .service {
+        display: inline-block;
+        width: 30%;
+        padding: 20px;
+        box-sizing: border-box;
+        vertical-align: top;
+    }
+    .service img {
+        max-width: 70px;
+        margin-bottom: 20px;
+      
+    }
+    
+    .service h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+    
+    .service p {
+        font-size: 1em;
+        color: #666;
+    }
+    
+    @media (max-width: 768px) {
+        .service {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+    .portfolio{
+        
+        padding: 30px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin: 20px;
+        border-radius: 10px;
+        position: relative;
+        top: 480px; /* Ajustez cette valeur selon votre mise en page */
+        
+    }
+    .c1{
+        color: blue;
+        margin-left: 0px;
+        
+    }
+    .c2{
+        font-size: 50px;
+        margin-left: 70px;
+        font-style:oblique ;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 30px;
+       
+    }
+    .c2, .c3{
+        margin-top: 0;
+        
+    }
+    .c3{
+        margin: 0;
+        margin-left: 80px;
+        margin-bottom: 300px;
+        margin-top: 0px;
+        font-family: 'Inria Serif';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 16px;
+       
+    }
+    option{
+        border: 6px solid black; /* Bordure de 2 pixels de large, solide et noire */
+        padding: 20px;
+    }
+   
+    .o1 {
+       
+        display: flex; /* Utilisation de flexbox pour disposer les éléments en colonne */
+        flex-direction: column; /* Afficher les éléments en colonne */
+        border: 1px solid gray; /* Bordure autour de la div */
+        border-radius: 15px;
+        padding: 20px; /* Espacement intérieur pour laisser de la place au contenu */
+        max-width: 300px; /* Largeur maximale de la div */
+        margin-left: 160px;
+        margin-top: -250px;
+        height: 400px;
+        width: 230px;
+        
+    }
+    
+    .io1 {
+        width: 250px;
+        height: 200px;
+        object-fit: cover;
+        margin-left: -10px;
+        margin-top: -10px;
+    }
+    
+    .o1h2, .o1h3 {
+        margin: 0; 
+        margin-top: 50px;
+    }
+    .o1h2{
+        margin-left: 15px;
+    }
+    .o1h3{
+        margin: 0;
+       
+        margin-bottom: 300px;
+        margin-top: 0px;
+        font-family: 'Serif';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 20px;
+        margin-top: 15px;
+    }
+    
+    .o2 {
+        display: flex; /* Utilisation de flexbox pour disposer les éléments en colonne */
+        flex-direction: column; /* Afficher les éléments en colonne */
+        border: 1px solid gray; /* Bordure autour de la div */
+        border-radius: 15px;
+        padding: 20px; /* Espacement intérieur pour laisser de la place au contenu */
+        max-width: 300px; /* Largeur maximale de la div */
+        margin-left: 455px;
+        margin-top: -440px;
+        height: 400px;
+        width: 230px;
+    }
+    
+    .io2 {
+        max-width: 100%; 
+        height: 160px; 
+        margin-bottom: 10px; 
+    }
+    .o2h2, .o2h3 {
+        margin: 0; 
+        margin-top: 50px;
+    }
+    .o2h2{
+        margin-left: 40px;
+
+    }
+    .o2h3{
+        margin: 0;
+        margin-bottom: 300px;
+
+        font-family: 'Serif';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 20px;margin-top: 15px;
+    }
+    
+    
+    
+    .o3 {
+        display: flex; /* Utilisation de flexbox pour disposer les éléments en colonne */
+        flex-direction: column; /* Afficher les éléments en colonne */
+        border: 1px solid gray; /* Bordure autour de la div */
+        border-radius: 15px;
+        padding: 20px; /* Espacement intérieur pour laisser de la place au contenu */
+        max-width: 300px; /* Largeur maximale de la div */
+        margin-left: 750px;
+        margin-top: -440px;
+        height: 400px;
+        width: 230px;
+    }
+    
+    .io3 {
+        max-width: 100%; /* Ajuster la largeur maximale de l'image */
+        height: 160px; /* Ajuster automatiquement la hauteur de l'image */
+        margin-bottom: 10px; /* Espacement entre l'image et les titres */
+    }
+    
+    .o3h2, .o3h3 {
+        margin: 0; 
+        margin-top: 50px;
+    }
+    .o3h2{
+        margin-left: 45px;
+    }
+    .o3h3{
+        margin: 0;
+        margin-bottom: 300px;
+
+        font-family: 'Serif';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 20px;margin-top: 15px;
+    }
+    .services1 {
+        text-align: center;
+        padding: 50px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin: 20px;
+        border-radius: 10px;
+        position: relative;
+        top: 60px; /* Ajustez cette valeur selon votre mise en page */
+    }
+    
+    .services1 h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    
+    .services1 p {
+        font-size: 1.1em;
+        color: #666;
+        max-width: 700px;
+        margin: auto;
+    }
+    .d6{
+        background-color: aliceblue;
+        height: 700px;
+        margin-top: 20px;
+    }
+    .d6 h1{
+        margin-top: 100px;
+        margin-left: 90px;
+        width: 500px;padding-top: 50px;
+        font-size: 40px;
+    }
+    
+    .d6 p{
+        font-size: 20px;
+        width: 40%;
+        margin-left: 110px;
+        color: black;
+    }
+    
+    .id6{
+        margin-left: 600px;
+        width: 500px;
+        margin-top: -550px;
+    }
+    .cn6 {
+        background-color:#007AFF;
+        margin-top: 30px;
+        max-width: 190px;
+        height: 40px;
+        text-align: center;
+        font-size: 10px;
+        padding-top: 15px;
+        text-decoration: none;
+        border-radius: 10px;
+       
+    }
+    .cn6 a{
+        color: #FFFFFF;
+    }
