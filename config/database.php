@@ -1,7 +1,7 @@
 <?php
 return [
-    'host' => 'mysql-maman1.alwaysdata.net',
-    'dbname' => 'maman1_gestion_clients',
-    'user' => 'maman1',
-    'pass' => 'mariamasarr'
+    'host' => 'localhost',
+    'dbname' => 'gestion_clients',
+    'user' => 'root',
+    'pass' => ''
 ];

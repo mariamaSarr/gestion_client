@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -15,10 +16,9 @@
 </head>
 <body>
     <div class="container">
-
         <!-- Formulaire de filtrage -->
         <form method="GET" action="">
-            <input type="hidden" name="action" value="index">
+            <input type="hidden" name="action" value="accueil">
             <label for="name">Nom:</label>
             <input type="text" name="name" id="name" value="<?= htmlspecialchars($_GET['name'] ?? '') ?>">
             <label for="address">Adresse:</label>
@@ -28,12 +28,9 @@
             <button type="submit">Filtrer</button>
         </form>
 
-        <!-- Formulaire de tri 
-         ce formulaire permet de ranges les clients selon le attribut choisit par ordre croissant 
-         du plus grand au plus petit-->
-         
+        <!-- Formulaire de tri -->
         <form method="GET" action="">
-            <input type="hidden" name="action" value="index">
+            <input type="hidden" name="action" value="accueil">
             <label for="sort">Trier par:</label>
             <select name="sort" id="sort" onchange="this.form.submit()">
                 <option value="">-- Sélectionnez --</option>
@@ -45,8 +42,8 @@
             </select>
         </form>
 
-         <!-- Liste des clients -->
-         <h1>Liste des Clients</h1>
+        <!-- Liste des clients -->
+        <h1>Liste des Clients</h1>
         <table>
             <thead>
                 <tr>
@@ -87,14 +84,13 @@
                 <?php endif; ?>
             </tbody>
         </table>
+
         <!-- Boutons d'export et impression -->
         <button onclick="window.print()" class="no-print">Imprimer</button>
-        
         <a href="?action=export&format=csv" class="no-print">Exporter en CSV</a> |
         <a href="?action=export&format=pdf" class="no-print">Exporter en PDF</a>
         <br><br>
-
-       
     </div>
 </body>
 </html>
+

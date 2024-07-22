@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
             $_SESSION['role'] = $user['role'];
-            header('Location: /gestion_clients/publics/accueil.php'); // Rediriger vers une page après connexion réussie
+            header('Location: /gestion_clients/views/ClientsView/accueil.php'); // Rediriger vers une page après connexion réussie
             exit();
         } else {
             $error = 'Nom d\'utilisateur ou mot de passe incorrect.';

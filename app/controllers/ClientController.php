@@ -1,10 +1,7 @@
 <?php
-
 require_once __DIR__ . '/../models/Client.php';
 require_once __DIR__ . '/../../config/database.php';
 require_once __DIR__ . '/../../vendor/tecnickcom/tcpdf/tcpdf.php';
-
-
 
 class ClientController
 {
@@ -39,11 +36,9 @@ class ClientController
         $sort = $_GET['sort'] ?? '';
 
         $clients = $this->clientModel->getAll($filters, $sort);
-        
 
         require __DIR__ . '/../../views/ClientsView/index.php';
     }
-    
 
     public function create()
     {
@@ -61,7 +56,7 @@ class ClientController
             'status' => $_POST['status']
         ];
         $this->clientModel->create($data);
-        header('Location: /gestion_clients/publics ');
+        header('Location:  /gestion_clients/publics');
     }
 
     public function edit($id)
@@ -89,53 +84,53 @@ class ClientController
         $this->clientModel->delete($id);
         header('Location: /gestion_clients/publics');
     }
+
     public function export($format)
-{
-    $clients = $this->clientModel->getAll();
+    {
+        $clients = $this->clientModel->getAll();
 
-    if ($format == 'csv') {
-        header('Content-Type: text/csv');
-        header('Content-Disposition: attachment; filename="clients.csv"');
+        if ($format == 'csv') {
+            header('Content-Type: text/csv');
+            header('Content-Disposition: attachment; filename="clients.csv"');
 
-        $output = fopen('php://output', 'w');
-        fputcsv($output, ['ID', 'Nom', 'Adresse', 'Téléphone', 'Email', 'Sexe', 'Statut']);
+            $output = fopen('php://output', 'w');
+            fputcsv($output, ['ID', 'Nom', 'Adresse', 'Téléphone', 'Email', 'Sexe', 'Statut']);
 
-        foreach ($clients as $client) {
-            fputcsv($output, $client);
+            foreach ($clients as $client) {
+                fputcsv($output, $client);
+            }
+
+            fclose($output);
+            exit();
+        } elseif ($format == 'pdf') {
+            // Utilisation de la librairie TCPDF pour générer un fichier PDF
+
+            $pdf = new TCPDF();
+            $pdf->AddPage();
+            $pdf->SetFont('helvetica', '', 12);
+
+            $html = '<h1>Liste des Clients</h1><table border="1"><thead><tr>
+                        <th>ID</th><th>Nom</th><th>Adresse</th><th>Téléphone</th><th>Email</th><th>Sexe</th><th>Statut</th>
+                     </tr></thead><tbody>';
+
+            foreach ($clients as $client) {
+                $html .= '<tr>
+                            <td>' . htmlspecialchars($client['id']) . '</td>
+                            <td>' . htmlspecialchars($client['name']) . '</td>
+                            <td>' . htmlspecialchars($client['address']) . '</td>
+                            <td>' . htmlspecialchars($client['phone']) . '</td>
+                            <td>' . htmlspecialchars($client['email']) . '</td>
+                            <td>' . htmlspecialchars($client['gender']) . '</td>
+                            <td>' . htmlspecialchars($client['status']) . '</td>
+                          </tr>';
+            }
+
+            $html .= '</tbody></table>';
+            $pdf->writeHTML($html, true, false, true, false, '');
+
+            $pdf->Output('clients.pdf', 'D');
+            exit();
         }
-
-        fclose($output);
-        exit();
-    } elseif ($format == 'pdf') {
-        // Utilisation de la librairie TCPDF pour générer un fichier PDF
-
-        $pdf = new TCPDF();
-        $pdf->AddPage();
-        $pdf->SetFont('helvetica', '', 12);
-
-        $html = '<h1>Liste des Clients</h1><table border="1"><thead><tr>
-                    <th>ID</th><th>Nom</th><th>Adresse</th><th>Téléphone</th><th>Email</th><th>Sexe</th><th>Statut</th>
-                 </tr></thead><tbody>';
-
-        foreach ($clients as $client) {
-            $html .= '<tr>
-                        <td>' . htmlspecialchars($client['id']) . '</td>
-                        <td>' . htmlspecialchars($client['name']) . '</td>
-                        <td>' . htmlspecialchars($client['address']) . '</td>
-                        <td>' . htmlspecialchars($client['phone']) . '</td>
-                        <td>' . htmlspecialchars($client['email']) . '</td>
-                        <td>' . htmlspecialchars($client['gender']) . '</td>
-                        <td>' . htmlspecialchars($client['status']) . '</td>
-                      </tr>';
-        }
-
-        $html .= '</tbody></table>';
-        $pdf->writeHTML($html, true, false, true, false, '');
-
-        $pdf->Output('clients.pdf', 'D');
-        exit();
     }
-}
-
 }
 ?>
